@@ -12,11 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-// serve static css
-
+// serve static css and public folders
 app.use(express.static("public"));
 
 // Routing
+require('./routing/apiRoutes.js')(app);
 require('./routing/htmlRoutes.js')(app);
 
 
