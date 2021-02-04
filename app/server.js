@@ -12,8 +12,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+// serve static css
+
+app.use(express.static("public"));
+
 // Routing
 require('./routing/htmlRoutes.js')(app);
+
 
 
 app.listen(PORT, function(){
