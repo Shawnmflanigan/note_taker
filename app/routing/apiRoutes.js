@@ -1,13 +1,6 @@
 const noteData = require('../data/db.json');
 const genId = require('generate-unique-id');
 
-// let id = genId ({
-//     length: 5,
-//     useLetters: false,
-//     useNumbers: true,
-
-// });
-
 module.exports = function (app) {
 
     app.get('/api/notes', function(req, res) {
